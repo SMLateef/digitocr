@@ -1,0 +1,21 @@
+import numpy as np  # linear algebra
+import pandas as pd  # data processing, CSV file I/O
+
+import matplotlib.pyplot as plt
+# %matplotlib inline  # Uncomment this only if running in Jupyter Notebook
+
+from keras.models import Sequential
+from keras.layers import Dense, Dropout, Lambda, Flatten
+from keras.optimizers import Adam, RMSprop
+from sklearn.model_selection import train_test_split
+from keras import backend as K
+from keras.preprocessing.image import ImageDataGenerator
+
+import os
+
+# If running on Kaggle, this will list the files in the input directory
+input_dir = "../input"
+if os.path.exists(input_dir):
+    print("Files in input directory:", os.listdir(input_dir))
+else:
+    print("⚠️ Input directory not found. Please update 'input_dir' with your dataset path.")
